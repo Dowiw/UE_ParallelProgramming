@@ -1,0 +1,47 @@
+Objective:
+Build a console-based Student Management System in C++ using concepts from Weeks 1–3, including data types, arrays, sets, hash maps, functions, and recursion.
+
+What to Do:
+Implement a program that:
+
+Defines a struct Student with:
+
+int id
+string name
+int age
+float grade
+Stores student records using:
+
+An array (static or dynamic)
+A set to prevent duplicate IDs (optional but encouraged)
+A hash map (unordered_map) for fast ID search
+Implements the following functions:
+
+void addStudent()
+void displayAllStudents()
+void findStudentByID(int id)
+void deleteStudentByID(int id)
+float getAverageGrade() (pass-by-reference for data array)
+int factorial(int n) (recursive function)
+
+Sample Test Case:
+Add 3 students.
+Display all students.
+Search for a student by ID.
+Delete a student.
+Calculate average grade.
+Calculate factorial of a number (e.g., 5).
+
+What to Submit:
+student_mgmt.cpp file
+Screenshot(s) of the console output
+(Optional) Short report explaining:
+Data structures used
+Functionality breakdown
+What you learned
+
+Tips:
+Use std::vector instead of C-style arrays if preferred.
+Refer to documentation for unordered_map, set, and sizeof().
+Keep your code clean and well-commented.
+Bonus points for creative UI or features!
