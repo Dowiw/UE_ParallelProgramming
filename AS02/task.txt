@@ -1,0 +1,55 @@
+Assignment 2: Bank Account Management System in C++
+
+Objective
+- Create a console-based Banking System using:
+Classes & Objects (OOP)
+Inheritance
+Constructors/Destructors
+Exception Handling
+File I/O (optional)
+What to Implement
+Base class: Account
+
+Protected members:
+int accountNumber
+string holderName
+float balance
+Public methods:
+Constructor(s)
+void deposit(float amount)
+void withdraw(float amount)
+void displayDetails()
+Derived class: SavingsAccount
+
+Inherits from Account
+- Adds float interestRate
+- Method: void applyInterest()
+- Exception Handling
+
+Throw exceptions for:
+- Withdrawal > balance
+- Invalid input (e.g., negative deposit)
+- Catch and handle exceptions with messages
+- Main Menu System
+
+Options to:
+- Create new account
+- Deposit/Withdraw
+- Display all accounts
+- Apply interest (for savings)
+- Exit
+
+Sample Test Case
+- Create 2 savings accounts.
+- Deposit 1000€ and 2000€.
+- Attempt to withdraw more than balance — test exception.
+- Display account details.
+- Apply 5% interest.
+- Display updated balance.
+
+What to Submit
+bank_system.cpp file
+Screenshot of console output showing menu operations
+Short 100-word reflection on:
+How OOP improved structure
+Where exception handling was useful
