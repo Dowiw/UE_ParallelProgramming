@@ -8,8 +8,8 @@ Constructors/Destructors
 Exception Handling
 File I/O (optional)
 What to Implement
-Base class: Account
 
+Base class: Account
 Protected members:
 int accountNumber
 string holderName
@@ -19,8 +19,8 @@ Constructor(s)
 void deposit(float amount)
 void withdraw(float amount)
 void displayDetails()
-Derived class: SavingsAccount
 
+Derived class: SavingsAccount
 Inherits from Account
 - Adds float interestRate
 - Method: void applyInterest()
