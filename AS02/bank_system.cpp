@@ -15,6 +15,9 @@ class Account {
 		if (accBal < 0) {
 			throw invalid_argument("Initital Balance cannot be less than 0.");
 		}
+		if (accNum < 0) {
+			throw invalid_argument("Account Number cannot be less than 0.");
+		}
 	}
 
 	// Boolean for duplicate account
@@ -114,7 +117,7 @@ int	integerGetterAndChecker(const string& print) {
 				throw invalid_argument("Input contains non-integer characters.\n");
 			return out;
 		} catch (const exception&) {
-			cout << "Enter a valid integer input!\n";
+			cout << "\nEnter a valid integer input!\n";
 		}
 	}
 }
@@ -129,7 +132,7 @@ float	floatGetterAndChecker(const string& print) {
 		if (cin.fail()) {
 			cin.clear(); // To clear the fail flag
 			cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard characters in stream
-			cout << "Enter a valid decimal number! (float).\n";
+			cout << "\nEnter a valid decimal number! (float).\n";
 		} else {
 			return (out);
 		}
@@ -186,7 +189,7 @@ int main() {
 			}
 			case 3: {
 				int accNum = integerGetterAndChecker("Enter account number: ");
-				float amount = floatGetterAndChecker("Enter deposit amount: ");
+				float amount = floatGetterAndChecker("Enter withdraw amount: ");
 
 				bool found = false;
 				for (auto account : accounts) {
