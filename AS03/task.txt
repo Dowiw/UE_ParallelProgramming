@@ -1,0 +1,69 @@
+Assignment 3: Parallel File Processor with Threads
+Overview
+	Create a C++ console application that acts as a Task Manager using multiple threads to simulate system processes performing dummy tasks.
+
+Thread Requirements
+	Each thread should:
+Run a simulated task (e.g., print data, compute factorial)
+Report its status to the main thread
+Use a mutex for shared state updates
+Main Thread Responsibilities
+Wait for all tasks to finish with pthread_join()
+Summarize execution details (total time, thread completion order)
+
+Core Requirements
+- Threading
+- Use POSIX threads (pthread_create, pthread_join)
+- Create at least 4 threads with different tasks (e.g., math operations, file-like prints)
+- Synchronization
+- Implement pthread_mutex_t for shared counters/logs
+- Optionally use pthread_cond_t for signaling task completion
+
+Shared Data
+- Use a shared structure/array for task execution times
+- Protect data with a mutex
+
+Simulated Tasks
+- Simulate tasks (e.g., sleep, compute prime numbers, file output)
+- Print task status: "Thread X started...", "Thread X done..."
+
+Sample Task Ideas
+- Compute factorial
+- Simulate file scanning (print lines with delay)
+- Sort a local array
+- Simulate loading resources
+
+Sample Output:
+- [Thread 1] Starting factorial task...
+- [Thread 2] Starting file scan simulation...
+- [Thread 1] Done. Result = 120
+- [Thread 2] Done scanning.
+- Main Thread: All threads completed.
+
+Execution Summary:
+ - Thread 1: Task = Factorial | Time = 15ms
+ - Thread 2: Task = File Scan | Time = 100ms
+
+Submission Requirements:
+task_manager.cpp source file
+
+Sample output screenshot(s)
+
+A short PDF summary (optional, but encouraged):
+
+What you learned
+
+Threading & synchronization approach
+
+Challenges faced
+
+Bonus: OpenMP Implementation
+Re-implement the core functionality of your program using OpenMP for parallelism instead of POSIX threads.
+
+Use OpenMP constructs like #pragma omp parallel to launch multiple tasks concurrently.
+
+Ensure thread-safe updates to shared data using OpenMP synchronization features (e.g., critical, atomic).
+
+Compare execution times between the pthread and OpenMP implementations.
+
+Include your observations on ease of implementation, readability, and performance.

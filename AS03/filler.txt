@@ -1,0 +1,19 @@
+	typedef struct s_ThreadArgs {
+	int thread_id;
+	void *args;
+} t_ThreadArgs;
+
+	// t_ThreadArgs factorial_args;
+	// int factorial_input;
+	// factorial_args.args = &factorial_input; // TODO: Turn modifiable
+	// factorial_args.thread_id = 1;
+
+	// TODO: Create real file scanner
+	// t_ThreadArgs file_scan_args;
+	// file_scan_args.thread_id = 2;
+	// string file_name = "lorem.txt";
+	// file_scan_args.args = (void *)&file_name;
+
+	// TODO: Do sorting of arrays etc.
+	// t_ThreadArgs sort_args;
+	// t_ThreadArgs load_args;
